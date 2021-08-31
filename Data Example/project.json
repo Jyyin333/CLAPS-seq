@@ -1,0 +1,20 @@
+{
+    "samples": {
+        "R21022539-snOGseq-endoA": {
+            "id": "R21022539-snOGseq-endoA",
+            "lb": "snOG-seq",
+            "pl": "illumina",
+            "pu": "ATTACTCG+AGGCTATA",
+            "sample": "R21022539-snOGseq-endoA",
+            "cn": "WX"
+        },
+        "R21022539-snOGseq8-endoB": {
+            "id": "R21022539-snOGseq8-endoB",
+            "lb": "snOG-seq",
+            "pl": "illumina",
+            "pu": "CGCTCATT+AGGATAGG",
+            "sample": "R21022539-snOGseq8-endoB",
+            "cn": "WX"
+        }
+    }
+}

@@ -1,0 +1,8 @@
+REF_FA="/genome/hg19.fa"
+INDEX_PATH="/Index/bwa/hg19/genome"
+Genome="/genome/hg19.chrom.sizes"
+SCRIPTS="/Scripts"
+picard="/biosoft/picard.jar"
+bgzip="/cluster/apps/htslib/1.9/bin/bgzip"
+tabix="/cluster/apps/htslib/1.9/bin/tabix"
+bedSort="/UCSC/bins/bedSort"
