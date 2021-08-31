@@ -9,7 +9,6 @@ Annotating OGs with chromatin state
 Chromatin state combined segmentations produced by chromHMM and Segway of HeLa cells were retrieved from UCSC at 
 https://genome.ucsc.edu/cgi-bin/hgTrackUi?g=wgEncodeAwgSegmentation&db=hg19
 
-
 '''
 
 
@@ -173,6 +172,7 @@ def bamCountinRegion(bf,chrom,start,end,offset=0,strand=None):
 
 
 
+	
 def get_color(name):
 
 	color_pairs = {
@@ -187,6 +187,7 @@ def get_color(name):
 	select = color_pairs.get(name)
 
 	return select
+
 
 
 
