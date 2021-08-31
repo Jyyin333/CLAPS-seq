@@ -1,6 +1,6 @@
 # Codes for CLAPS-seq
 
-This repository stroes original codes that can reproduce ***Genome-wide analysis of 8-oxo-7,8-dihydro-2'-deoxyguanosine at single-nucleotide resolution unveils the depletion of oxidative damage at G-quadruplex sites*** results.
+This repository stroes original codes that can reproduce ***Base resolution mapping of 8-oxoguanine unveils reduced occurrence at G-quadruplexes*** results.
 
 
 
