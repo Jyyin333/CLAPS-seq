@@ -3,6 +3,7 @@
 # load config file
 # config file contains some path or tools environment variables
 # .json file contains a description of the properties of the sample, such as Read group identifier, Library ...
+
 include: "conf/config"
 configfile: "conf/project.json"
 
