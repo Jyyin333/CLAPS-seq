@@ -1,6 +1,6 @@
 # Codes for CLAPS-seq
 
-This repository stroes original codes that can reproduce ***Base resolution mapping of 8-oxoguanine unveils reduced occurrence at G-quadruplexes*** results.
+This repository stroes original codes that can reproduce results in ***Base resolution mapping of 8-oxoguanine unveils reduced occurrence at G-quadruplexes***.
 
 
 
