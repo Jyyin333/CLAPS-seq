@@ -41,7 +41,7 @@ This repository stroes original codes that can reproduce results in ***Base reso
 ## 1. Quality Check and Alignment
 You can downloaded the raw sequencing data from [GEO](https://www.ncbi.nlm.nih.gov/geo/) under GSE181312.  
 Type `snakemake -s Align.snakefile`.  
-Some configuration file formats can be viewed in [Example](https://github.com/Jyyin333/snOG-seq/blob/main/Data%20example/)
+Some configuration file formats can be viewed in [Example](https://github.com/Jyyin333/CLAPS-seq/tree/main/Data%20Example)
 
 ## 2. Fetch predicted OG sites
 After aligning reads to reference genome, we fetched the predicted OG sites.
@@ -146,7 +146,7 @@ plotMatrix.py -t treat.rp.mtx.gz -c ctrl.rp.mtx.gz -o treat.rp.pdf
 For other type of Regions, such as DHS, using [deeptools](https://deeptools.readthedocs.io/en/develop/content/list_of_tools.html) to generate profiles.
 
 ## 6. Background G/GC content
-There are also two type of scripts to visualize background G/GC content. With [reference point](https://github.com/Jyyin333/snOG-seq/blob/main/scripts/bgG_rp.py) mode, you can focus on a specific point(e.g. TSS) and see how G/GC content distributing around it.  As for [scale](https://github.com/Jyyin333/snOG-seq/blob/main/scripts/bgG_sc.py) mode, it's similar to scaleMatrix.py in Step5. See the script for details.
+There are also two type of scripts to visualize background G/GC content. With [reference point](https://github.com/Jyyin333/CLAPS-seq/blob/main/Scripts/bgG_rp.py) mode, you can focus on a specific point(e.g. TSS) and see how G/GC content distributing around it.  As for [scale](https://github.com/Jyyin333/CLAPS-seq/blob/main/Scripts/bgG_sc.py) mode, it's similar to scaleMatrix.py in Step5. See the script for details.
 ```
 bgG_rp.py -r genes.bed -g genome.2bit -refpoint tss -a 3000 -d 3000 -bs 50 -o genes.backgroundGC.rp.pdf
 
@@ -156,7 +156,7 @@ bgG_sc.py -r genes.bed -g genome.2bit -a 2000 -d 2000 -m 5000 -bs 50 -o gene.bac
 ```
 For PQS region, due to the large amount of data, running this script directly can be very time-consuming. We suggest splitting the files and merging the results.
 
-Note: Either in Step5 or in Step6, in scale mode, these scripts are only applicable to Region files with strand information such as [Gene BED](https://github.com/Jyyin333/snOG-seq/blob/main/Data%20example/genes.bed) file. In other words, the images they produce must be in strand-split format.
+Note: Either in Step5 or in Step6, in scale mode, these scripts are only applicable to Region files with strand information such as [Gene BED](https://github.com/Jyyin333/CLAPS-seq/blob/main/Data%20Example/genes.bed) file. In other words, the images they produce must be in strand-split format.
 
 ## 7. Wilcoxon test
 In order to investigate the effects of G4, we classified Promoters(defined as TSS ± 2kb) into two categories depending on whether they overlap with G4-peak or not. Type command line as following:
