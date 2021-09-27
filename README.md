@@ -46,7 +46,7 @@ Some configuration file formats can be viewed in [Example](https://github.com/Jy
 Immediately, deeptools function multiBamSummary was used for validating reproducibility as well as robustness:
 ```
 # run multiBamSummary
-multiBamSummary bins -b ${bamfiles[@]} -o bam.bins.npz -l ${labels[@]} -bs 10000 --outRawCounts AllBam.bins.rawCounts.mtx
+multiBamSummary bins -b ${bamfiles[@]} -o AllBam.bins.npz -l ${labels[@]} -bs 10000 --outRawCounts AllBam.bins.rawCounts.mtx
 ```
 At the same time, library sizes for each sample were computed using samtools or other appropriate tools, the lib.sizes file should following this format and in order of the bamfiles used in previous step:
 ```
