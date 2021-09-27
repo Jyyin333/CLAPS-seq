@@ -1,6 +1,6 @@
 # Codes for CLAPS-seq
 
-This repository stroes original codes that can reproduce results in ***Base resolution mapping of 8-oxoguanine unveils reduced occurrence at G-quadruplexes***.
+This repository stroes original codes used in ***Base resolution mapping of 8-oxoguanine unveils reduced occurrence at G-quadruplexes***.
 
 
 
@@ -43,6 +43,22 @@ You can downloaded the raw sequencing data from [GEO](https://www.ncbi.nlm.nih.g
 Type `snakemake -s Align.snakefile`.  
 Some configuration file formats can be viewed in [Example](https://github.com/Jyyin333/CLAPS-seq/tree/main/Data%20Example)
 
+Immediately, deeptools function multiBamSummary was used for validating reproducibility as well as robustness:
+```
+# run multiBamSummary
+multiBamSummary bins -b ${bamfiles[@]} -o bam.bins.npz -l ${labels[@]} -bs 10000 --outRawCounts AllBam.bins.rawCounts.mtx
+```
+At the same time, library sizes for each sample were computed using samtools or other appropriate tools, the lib.sizes file should following this format and in order of the bamfiles used in previous step:
+```
+114834689
+60748386
+90203070
+109105413
+125435253
+...
+```
+Then run plot_corr.r, `Rscript plot_corr.r`.
+
 ## 2. Fetch predicted OG sites
 After aligning reads to reference genome, we fetched the predicted OG sites.
 Type `snakemake -s snOG-treat.up.snakefile` for Treat samples or `snakemake -s snOG-treat.up.snakefile` for control samples.
@@ -76,7 +92,7 @@ There are two statistics files. One looks like:
 8	16081684	11684762	8548633	8089596
 9	15131825	11283308	8293559	9695983
 ```
-and the other looks like:
+and the other:
 ```
 GGG	2957222
 AGG	2702839
@@ -115,7 +131,7 @@ chr1	10509	10701	R	1000	.	10509	10701	127,127,127
 chr1	13960	14850	CTCF	1000	.	13960	14850	10,190,254
 chr1	14850	15800	R	1000	.	14850	15800	127,127,127
 ```
-Then run `ChromstateAnno.py -a treat.bam -b ctrl.bam --chromstate Annotationfile.bed.gz -g genome.2bit --outmatrix res.tsv -o boxplot.pdf`, the res.tsv looks like this:
+Then run `ChromstateAnno.py -a treat.bam -b ctrl.bam --chromstate Annotationfile.bed.gz -g genome.2bit --outmatrix res.tsv -o boxplot.pdf`, the res.tsv:
 ```
 Chrom	Start	End	Name	gA_mean_counts	gB_mean_counts	GC_ratio
 chr1	10200	10309	WE	0.0	0.0	0.5412844036697247
