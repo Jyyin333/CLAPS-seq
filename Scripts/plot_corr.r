@@ -6,9 +6,9 @@ library(ggplot2)
 
 
 toplot <- function(df, labs, outfig, lg=F){
-  # calculate correlation coefficient
-  rsquare <- cor(df$V1, df$V2, method='spearman')
-  r2 <- sprintf("italic(R^2) == %.3f", rsquare)
+  # calculate pearson correlation coefficient
+  cc <- cor(df$V1, df$V2, method='pearson')
+  r <- sprintf("italic(r) == %.3f", cc)
   
   # skipzeros
   df <- df[(df$V1!=0 & df$V2!=0), ]
@@ -41,7 +41,7 @@ toplot <- function(df, labs, outfig, lg=F){
     labs(x=labs[1], y=labs[2], title='') + theme_classic() + # + geom_smooth(method = glm)
     theme(axis.title.x=element_text(size=15,face="bold",vjust=0.5)) +
     theme(axis.title.y=element_text(size=15,face="bold",vjust=0.5)) +
-    geom_text(data=df,mapping=aes(x=x1, y=y1, label=r2),
+    geom_text(data=df,mapping=aes(x=x1, y=y1, label=r),
               parse = TRUE,inherit.aes = FALSE,size=4)
   
   ggsave(p,filename=outfig,width=8,height=6,dpi=600)
