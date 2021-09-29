@@ -5,16 +5,14 @@
             "lb": "CLAPS-seq",
             "pl": "illumina",
             "pu": "ATTACTCG+AGGCTATA",
-            "sample": "R21022539-snOGseq-endoA",
-            "cn": "WX"
+            "sample": "R21022539-snOGseq-endoA"
         },
         "R21022539-snOGseq8-endoB": {
             "id": "R21022539-snOGseq8-endoB",
             "lb": "CLAPS-seq",
             "pl": "illumina",
             "pu": "CGCTCATT+AGGATAGG",
-            "sample": "R21022539-snOGseq8-endoB",
-            "cn": "WX"
+            "sample": "R21022539-snOGseq8-endoB"
         }
     }
 }
