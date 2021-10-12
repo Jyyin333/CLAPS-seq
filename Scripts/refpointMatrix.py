@@ -3,7 +3,7 @@
 
 '''
 Description:
-	This script calculates scores along genome per region,
+	This script calculates scores along genome per sub_region,
 	Create a matrix that can be used to plot distribution
 	Importantly, different with deeptools computeMatrix, \
 	here we divide signal into two parts according to template-strand or non-template-strand
