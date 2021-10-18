@@ -39,7 +39,7 @@ This repository stroes original codes used in ***Genome-wide analysis of 8-oxo-7
 # Workflow Example
 
 ## 1. Quality Check and Alignment
-You can downloaded the raw sequencing data from [GEO](https://www.ncbi.nlm.nih.gov/geo/) under GSE181312.  
+You can download the raw sequencing data from [GEO](https://www.ncbi.nlm.nih.gov/geo/) under GSE181312.  
 Type `snakemake -s Align.snakefile`.  
 Some configuration file formats can be viewed in [Example](https://github.com/Jyyin333/CLAPS-seq/tree/main/Data%20Example)
 
