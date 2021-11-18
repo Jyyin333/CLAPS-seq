@@ -62,6 +62,7 @@ def main():
 		if read.mapping_quality < 60:
 			continue
 
+		mapq = read.mapping_quality
 		# for negtive strand
 		# predicted-OG located in read end + 1
 		if read.is_reverse:
