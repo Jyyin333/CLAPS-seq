@@ -18,7 +18,7 @@ else:
     seq_list = [line.decode().split("\t")[3] for line in gzip.open(bed)]
 
 
-outfile = sys.argv[2]
+outfile = open(sys.argv[2], 'w')
 base_dict = count_multi_bases(seq_list, 3, 6)
 
 total = 0
