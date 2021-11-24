@@ -50,8 +50,8 @@ def process_header(line, clabel = None):
 	# make xlabels
 	upstream = int(ups_pat.search(line).group(1))
 	downstream = int(dos_pat.search(line).group(1))
-	start_label = '+' + str(upstream / 1000) + 'kb'
-	end_label = '-' + str(downstream / 1000) + 'kb'
+	start_label = '-' + str(upstream / 1000) + 'kb'
+	end_label = '+' + str(downstream / 1000) + 'kb'
 
 	if mode == 'refpoint' and clabel == None:
 		x_labels = [start_label, 'TSS', end_label]
