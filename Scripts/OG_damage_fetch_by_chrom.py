@@ -3,9 +3,9 @@
 
 '''
 Description:
-This script further filters the aligned reads obtained in the previous step
-and get Read 1 start site ( or end site for reads mapped to negtive strand ), i.e. predicted-OG site
-Output the file in BED format
+This step further filtering the aligned reads obtained in the previous step
+and obtain Read 1 start site ( or end site for reads mapped to negtive strand ), i.e. predicted-OG site
+Output Bed.
 '''
 
 import argparse, pysam, sys, re
