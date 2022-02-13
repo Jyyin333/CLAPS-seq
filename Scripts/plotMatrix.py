@@ -213,9 +213,9 @@ def main():
 	# parse arguments
 	parser = argparse.ArgumentParser(description=
 		'Be used to plot stranded signal distribution with matrix[.gz] file'
-		' generated from profileMatrix.py or scaleMatrix.py')
+		' generated from refpointMatrix.py or scaleMatrix.py')
 
-	parser.add_argument('-t', required=True, help='Matrix file [.gz] generated from profileMatrix.py')
+	parser.add_argument('-t', required=True, help='Matrix file [.gz]')
 
 	parser.add_argument('-c', required=False, help=
 		'If control sample exists, then Treat sample signals would be normalized by this value.')
