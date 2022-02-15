@@ -1,6 +1,6 @@
 # up-analysis For INPUT samples
 
-incude: "conf/config"
+include: "conf/config"
 SAMPLES=[line.rstrip() for line in open("conf/sm.Input.list")]
 
 # Specifies which chromosomes to keep
